@@ -14,7 +14,7 @@
   <div class="solution">
 
     <div class="person-wrapper">
-      <PersonCard v-for="person in people" :person="person" class="person-card" :personClick="alertBox"/>
+      <PersonCard v-for="person in people" v-bind:key="person._id" :person="person" class="person-card" :personClick="alertBox"/>
     </div>
     <div class="summary">{{people.length}} persons cards displayed</div>
 

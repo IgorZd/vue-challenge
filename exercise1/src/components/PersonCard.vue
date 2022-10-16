@@ -15,10 +15,11 @@
 <script>
   export default {
     name: 'PersonCard',
+    emits: ['personClick'],
     props: {
       person: {
         type: Object,
-        default: {},
+        default: ()=>({}),
       },
     },
   };
