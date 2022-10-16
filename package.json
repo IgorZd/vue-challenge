@@ -1,0 +1,46 @@
+{
+  "name": "suade-labs-frontend-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "exercise1": "vue-cli-service serve ./exercise1/src/main.js",
+    "exercise2": "vue-cli-service serve ./exercise2/src/main.js",
+    "exercise3": "vue-cli-service serve ./exercise3/src/main.js",
+    "exercise4": "vue-cli-service serve ./exercise4/src/main.js",
+    "exercise5": "vue-cli-service serve ./exercise5/src/main.js",
+    "exercise6": "cd exercise6 && npm run test",
+    "exercise6runonly": "vue-cli-service serve ./exercise6/src/main.js",
+    "build": "vue-cli-service build",
+    "test:e2e": "vue-cli-service test:e2e",
+    "postinstall": "cd exercise6 && npm install",
+    "lint": "eslint \"./\" && echo \"ESLint OK\""
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint-config-suade": "2.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "suade"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
