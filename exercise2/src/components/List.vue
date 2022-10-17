@@ -23,17 +23,27 @@
       data: {type: Array, default: ()=>[]},
       options: {type: Object, default: ()=>({limit: 25, offset: 0})},
     },
+    data() {
+      return (
+        {
+          localOptions: this.options,
+        }
+      );
+    },
     computed: {
       // sort data by name
       sortedData() {
-        return this.data.sort((a, b)=>{
+        const localData = [...this.data];
+        const compare = (a, b) => {
           if (a.name < b.name) {
             return -1;
           } else if (a.name > b.name) {
             return 1;
           }
           return 0;
-        });
+        };
+
+        return localData.sort(compare);
       },
       // paginate data
       paginatedData() {
@@ -52,7 +62,7 @@
     },
     methods: {
       changePage(page) {
-        this.options.pagination.offset = (page) * this.options.pagination.limit;
+        this.localOptions.pagination.offset = (page) * this.localOptions.pagination.limit;
       },
     },
   };

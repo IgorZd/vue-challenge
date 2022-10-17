@@ -16,7 +16,7 @@
   </div>
   <h4>Solution</h4>
   <div class="solution">
-    <List data="people" options="options"></List>
+    <List :data="people" :options="options"/>
   </div>
 
 </template>
@@ -36,11 +36,9 @@
     },
     created() {
       fetch('https://run.mocky.io/v3/8aabb2ec-21c0-42c0-815c-0d748b775734')
-        .then(function(response) {
-          response.json();
-        })
-        .then(function(data) {
-          this.people = data;
+        .then((response)=> response.json())
+        .then((result) => {
+          this.people = result;
         });
     },
   };
