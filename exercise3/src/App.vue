@@ -116,5 +116,52 @@
   }
 
   // TODO: Add your CSS Styling here
-
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+.item {
+  width: calc(100% - 86.4%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+}
+.item:nth-child(2n) {
+  background-color: #93afc5;
+}
+.item:nth-child(2n + 1) {
+  background-color: #547c98;
+}
+.item:nth-child(4n + 4) {
+  background-color: #004c6d;
+}
+.eye-color {
+  display: flex;
+  align-items: center;
+}
+.eye-icon {
+  width: 32px;
+  height: 26px;
+  margin-left: 6px;
+}
+.name, .age, .eye-color {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .item {
+    width: calc(100% - 77%);
+  }
+}
+@media (max-width: 600px) {
+   .item {
+    width: calc(100% - 52%);
+  }
+}
 </style>
