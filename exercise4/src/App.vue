@@ -18,12 +18,38 @@
   <h4>Solution</h4>
   <div class="solution">
     <!-- TODO: implement template here -->
+    <List :data="people" :sorting="sorting" :filtering="filtering" />
   </div>
 
 </template>
 
 <script>
   // TODO: implement logic here
+  import {mapActions, mapGetters} from 'vuex';
+  import List from './components/List';
+  import {store} from './store/store';
+
+  import helpers from './helpers/helpers';
+
+  export default {
+    name: 'App',
+    components: {List},
+    data: () => {
+      return {
+        sorting: helpers.sortByAge,
+        filtering: helpers.filterByAge(25, 35),
+      };
+    },
+    computed: {
+      ...mapGetters(['people']),
+    },
+    methods: {
+      ...mapActions(['getPeople']),
+    },
+    created() {
+      this.getPeople(store);
+    },
+  };
 </script>
 
 <style lang="scss">

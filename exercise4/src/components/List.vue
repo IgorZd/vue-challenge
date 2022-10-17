@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="item in sortedData" :key="item._id">
-      <slot v-bind:item="item"></slot>
+      <slot v-bind:item="item">{{item.name}} - {{item.age}} years</slot>
     </li>
   </ul>
 </template>
