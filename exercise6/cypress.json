@@ -4,5 +4,6 @@
   "viewportWidth": 1280,
   "viewportHeight": 800,
   "experimentalStudio": true,
-  "requestTimeout": 20000
+  "requestTimeout": 20000,
+  "projectId": "btz8y7"
 }

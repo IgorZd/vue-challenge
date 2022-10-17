@@ -16,7 +16,7 @@ describe('4 - Features Interactions', () => {
 
     it('Should sort by name descending', ()=>{
       cy.get('[data-cy=sort-by-name]').click();
-      cy.get('[data-cy=cell-1-1]').contains('Zimmerman Barry');
+      cy.get('[data-cy=cell-1-1]').contains('Adrian Burch');
     });
   });
 

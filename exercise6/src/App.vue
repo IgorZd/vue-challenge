@@ -99,6 +99,11 @@
           this.pagination.offset = 0;
         },
       },
+      searchString: {
+        handler() {
+          this.pagination.offset = 0;
+        },
+      },
     },
   };
 
